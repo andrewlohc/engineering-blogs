@@ -20,11 +20,11 @@ const feedSchema = new mongoose.Schema({
   },
   contentEncoded: {
     type: String,
-    required: false,
+    default: "",
   },
   contentEncodedSnippet: {
     type: String,
-    required: false,
+    default: "",
   },
   guid: {
     type: String,

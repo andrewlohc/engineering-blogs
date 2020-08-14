@@ -2,9 +2,20 @@ const express = require("express");
 
 const router = express.Router();
 const fetchNetflixFeeds = require("../middleware/fetchFeeds");
+const Feed = require("../models/feed");
 
 router.get("/feeds", async (req, res) => {
-  res.status(200).send();
+  try {
+    await Feed.find({}, function (err, feeds) {
+      var feedMap = {};
+      feeds.forEach((feed) => {
+        feedMap[feed.guid] = feed;
+      });
+      res.send(feedMap);
+    });
+  } catch (e) {
+    res.status(500).send();
+  }
 });
 
 // Manually requesting RSS fetch.

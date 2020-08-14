@@ -10,8 +10,8 @@ const storeFeeds = async (feed) => {
         title: item.title,
         link: item.link,
         pubDate: item.pubDate,
-        contentEncoded: item.contentEncoded,
-        contentEncodedSnippet: item.contentEncodedSnippet,
+        contentEncoded: item["content:encoded"],
+        contentEncodedSnippet: item["content:encodedSnippet"],
         guid: item.guid,
         categories: item.categories,
         isoDate: item.isoDate,
@@ -19,9 +19,8 @@ const storeFeeds = async (feed) => {
 
       try {
         await newFeed.save();
-        res.status(201).send(feed);
       } catch (e) {
-        res.send(400).send(e);
+        console.log(e);
       }
     }
   });
