@@ -4,4 +4,4 @@
     publish="/build"
 
 [context.production]
-    environment = { REACT_APP_BACKEND_URL='https://engineeringblogs-backend.herokuapp.com//feeds' }
+    environment = { REACT_APP_BACKEND_URL='https://engineeringblogs-backend.herokuapp.com/feeds' }
