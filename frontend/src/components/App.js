@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   onLoad = async () => {
-    const req = await axios.get("http://localhost:3000/feeds");
+    const req = await axios.get(process.env.REACT_APP_BACKEND_URL);
 
     this.setState({
       feeds: req.data,
@@ -23,7 +23,7 @@ class App extends React.Component {
       <div>
         <div className="ui stackable borderless menu">
           <div className="icon item">
-            <h3 claName="ui header">
+            <h3 className="ui header">
               <i className="code icon"></i>Engineering Blogs
             </h3>
           </div>
