@@ -20,4 +20,4 @@ git subtree push --prefix backend heroku master
 
 ## Netlify Frontend Deployment
 
-- Deployment is automatically triggered when commit pushes into Github. For details, checkout the netlify.toml file.
+Deployment is automatically triggered when commit pushes into Github. For details, checkout the netlify.toml file.
