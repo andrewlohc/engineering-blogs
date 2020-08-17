@@ -4,7 +4,9 @@ A blog build base on RSS feeds.
 
 Built using MERN stack.
 
-Frontend link: https://adoring-clarke-7bf77f.netlify.app
+Frontend Demo link: https://adoring-clarke-7bf77f.netlify.app
+
+![Frontend Demo](https://github.com/andrewlohc/engineering-blogs/blob/master/docs/demo.png)
 
 ## Heroku Backend Deployment
 
