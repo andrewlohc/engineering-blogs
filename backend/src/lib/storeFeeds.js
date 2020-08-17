@@ -1,6 +1,9 @@
 const Feed = require("../models/feed");
 
 const storeFeeds = async (feed) => {
+  const defaultImage = feed.image;
+  const company = feed.company;
+
   feed.items.forEach(async (item) => {
     const doesFeedExist = await Feed.findOne({ guid: item.guid });
 
@@ -10,11 +13,13 @@ const storeFeeds = async (feed) => {
         title: item.title,
         link: item.link,
         pubDate: item.pubDate,
-        contentEncoded: item["content:encoded"],
-        contentEncodedSnippet: item["content:encodedSnippet"],
+        content: item.content,
+        contentSnippet: item.contentSnippet,
         guid: item.guid,
         categories: item.categories,
         isoDate: item.isoDate,
+        defaultImage: defaultImage,
+        company: company,
       });
 
       try {

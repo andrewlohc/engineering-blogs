@@ -14,15 +14,14 @@ const feedSchema = new mongoose.Schema({
     required: false,
   },
   pubDate: {
-    type: String,
-    required: false,
-    trim: false,
+    type: Date,
+    required: true,
   },
-  contentEncoded: {
+  content: {
     type: String,
     default: "",
   },
-  contentEncodedSnippet: {
+  contentSnippet: {
     type: String,
     default: "",
   },
@@ -36,8 +35,17 @@ const feedSchema = new mongoose.Schema({
     default: undefined,
   },
   isoDate: {
-    type: String,
+    type: Date,
     required: false,
+  },
+  defaultImage: {
+    type: String,
+    required: true,
+  },
+  company: {
+    type: String,
+    lowercase: true,
+    required: true,
   },
 });
 
