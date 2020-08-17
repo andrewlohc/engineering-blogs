@@ -1,8 +1,8 @@
-# engineering-blogs
+# Engineering Blogs
 
-A blog build base on RSS feeds.
+A blog build based on top engineering RSS feeds.
 
-Built using MERN stack.
+Built using MERN stack, updates daily.
 
 Frontend Demo link: https://adoring-clarke-7bf77f.netlify.app
 
